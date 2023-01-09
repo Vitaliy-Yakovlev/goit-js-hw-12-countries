@@ -1,5 +1,5 @@
 {{#each this}}
-<h2 class="title-country">{{name}}</h2>
+<h2 class="title-country">{{name.official}}</h2>
 <div class="js-conuntry-container">
     <div class="container-country">
         <p class="container-text-country">Capital: <span class="text-country">{{capital}}</span></p>
@@ -7,12 +7,12 @@
         <p class="container-text-country">Language:</p>
         <ul>
             {{#each languages}}
-            <li class="text-country">{{this.name}}</li>
+            <li class="text-country">{{this}}</li>
             {{/each}}
         </ul>
     </div>
     <div class="flag-country">
-        <img width="600" height="240" class="flag" src="{{flag}}" alt="flag" >
+        <img width="600" height="240" class="flag" src="{{flags.svg}}" alt="flag" >
     </div>
 </div>
 {{/each}}
